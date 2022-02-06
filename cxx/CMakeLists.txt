@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(expression_template_benchmark)
+project(polly_import)
 
 include(cmake/cxx_setting.cmake)
 
