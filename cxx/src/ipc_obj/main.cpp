@@ -1,5 +1,4 @@
 #include <fmt/core.h>
-#include <folly/ConcurrentLazy.h>
 
 int main()
 {
