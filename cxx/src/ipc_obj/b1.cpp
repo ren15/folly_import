@@ -1,15 +1,21 @@
 #include <boost/interprocess/managed_shared_memory.hpp>
+#include <fmt/core.h>
 #include <iostream>
 
 using namespace boost::interprocess;
 
+#include <random>
+
 int main()
 {
+    std::random_device dev;
+    std::mt19937 rng(dev());
+    auto dist100 = std::uniform_int_distribution<std::mt19937::result_type>(0, 100);
+    int random_int = dist100(rng);
+
     shared_memory_object::remove("Boost");
-    managed_shared_memory managed_shm { open_or_create, "Boost", 1024 };
-    int* i = managed_shm.construct<int>("Integer")(99);
-    std::cout << *i << '\n';
-    std::pair<int*, std::size_t> p = managed_shm.find<int>("Integer");
-    if (p.first)
-        std::cout << *p.first << '\n';
+    auto managed_shm = managed_shared_memory { open_or_create, "Boost", 1024 };
+
+    int* i = managed_shm.construct<int>("Integer")(random_int);
+    fmt::print("random integer in shm set to {}\n", *i);
 }

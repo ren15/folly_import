@@ -27,6 +27,7 @@ run:
 	${BUILD_DIR}/bin/unbounded_queue_test
 	${BUILD_DIR}/bin/boost_ipc_obj
 	${BUILD_DIR}/bin/b1
+	${BUILD_DIR}/bin/b2
 
 bench:
 	${BUILD_DIR}/bin/mathop_bench
