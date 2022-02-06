@@ -7,9 +7,6 @@ SOURCE_DIR=${REPO_DIR}/cxx
 help:
 	echo "Check Makefile"
 
-setup_gbench:
-	bash ci/setup_gbench.sh
-
 configure:
 	cmake -E make_directory ${BUILD_DIR}
 
@@ -27,8 +24,7 @@ build:
 	cmake --build ${BUILD_DIR} -j
 	
 run: 
-	${BUILD_DIR}/bin/dag_range
-	${BUILD_DIR}/bin/ranges_impl_1
+	${BUILD_DIR}/bin/main
 bench:
 	${BUILD_DIR}/bin/mathop_bench
 	${BUILD_DIR}/bin/dag_bench

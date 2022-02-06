@@ -12,6 +12,7 @@ apt-get install -y \
     gcc \
     clang \
     clang-tidy \
+    clangd \
     cmake 
 
 pip install conan
