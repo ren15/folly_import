@@ -12,9 +12,6 @@ apt-get install -y \
     gcc \
     clang clang-tidy clangd \
     curl zip unzip tar \
+    pkg-config \
     cmake 
-
-pip install conan
-
-
 
