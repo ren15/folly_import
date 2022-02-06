@@ -4,6 +4,7 @@ temp
 .DS_Store
 dist
 build
+folly
 
 CompFinance/
 benchmark/

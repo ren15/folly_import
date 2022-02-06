@@ -10,9 +10,11 @@ apt-get install -y \
     ninja-build \
     make \
     gcc \
-    clang \
-    clang-tidy \
-    clangd \
+    clang clang-tidy clangd \
+    curl zip unzip tar \
     cmake 
 
 pip install conan
+
+
+

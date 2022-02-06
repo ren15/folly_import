@@ -16,10 +16,11 @@ jobs:
       - name: Distro setup
         run: |
           bash ci/deb_install.sh
+          bash ci/vcpkg_install.sh
 
       - name: Compile and Run
         run: |
-          make configure
-          make build
-          make run
+          # make configure
+          # make build
+          # make run
           # make bench
