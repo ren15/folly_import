@@ -24,6 +24,10 @@ build:
 	
 run: 
 	${BUILD_DIR}/bin/main
+	${BUILD_DIR}/bin/unbounded_queue_test
+	${BUILD_DIR}/bin/boost_ipc_obj
+	${BUILD_DIR}/bin/b1
+
 bench:
 	${BUILD_DIR}/bin/mathop_bench
 	${BUILD_DIR}/bin/dag_bench
