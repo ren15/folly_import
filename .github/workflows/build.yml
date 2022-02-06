@@ -1,0 +1,26 @@
+name: ci
+
+on: push
+
+env:
+  DEBIAN_FRONTEND: noninteractive
+
+jobs:
+  run:
+    runs-on: ubuntu-20.04
+    container: debian:testing
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Distro setup
+        run: |
+          bash ci/deb_install.sh
+
+      - name: Compile and Run
+        run: |
+          ls
+          # make configure
+          # make build
+          # make run
+          # make bench
