@@ -1,10 +1,9 @@
 #include <boost/interprocess/managed_shared_memory.hpp>
 #include <fmt/core.h>
-#include <iostream>
-
-using namespace boost::interprocess;
 
 #include <random>
+
+using namespace boost::interprocess;
 
 int main()
 {
