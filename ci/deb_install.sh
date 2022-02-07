@@ -14,3 +14,5 @@ apt-get install -y \
     curl zip unzip tar \
     pkg-config \
     git
+
+pip install conan
