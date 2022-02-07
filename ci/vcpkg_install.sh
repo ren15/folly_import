@@ -3,8 +3,6 @@ git clone https://github.com/Microsoft/vcpkg.git ~/vcpkg
 
 ~/vcpkg/vcpkg install \
     folly \
-    fmt \
-    range-v3 \
     benchmark \
     gtest \
     boost
