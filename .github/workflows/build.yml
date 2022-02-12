@@ -18,6 +18,8 @@ jobs:
       
       - name: Compile and Run
         run: |
+          pwd
+          ls
           ninja --version
           make configure
           make build
