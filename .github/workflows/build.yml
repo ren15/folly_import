@@ -20,6 +20,8 @@ jobs:
         run: |
           pwd
           ls
+          ls ${HOME}
+          ls /root
           ninja --version
           make configure
           make build
