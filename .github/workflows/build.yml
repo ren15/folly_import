@@ -14,7 +14,8 @@ env:
 jobs:
   build:
     runs-on: ubuntu-20.04
-    container: ${{ env.IMAGE_REPO }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+    container: 
+      image: ${{ env.IMAGE_REPO }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
 
     steps:
       - uses: actions/checkout@v2
