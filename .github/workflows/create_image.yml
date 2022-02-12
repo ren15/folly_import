@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'ci/**'
+      - '.github/workflows/create_image.yml'
 
 env:
   IMAGE_REGISTRY: "ghcr.io"
@@ -12,7 +13,7 @@ env:
   IMAGE_REPO: "ghcr.io/${{ github.repository_owner }}"
   IMAGE_NAME: "folly-dev-env"
   DEBIAN_FRONTEND: noninteractive
-  IMAGE_TAG: 0.0.1 
+  IMAGE_TAG: 0.0.2 
 
 jobs:
   create_image:
