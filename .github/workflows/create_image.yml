@@ -1,6 +1,9 @@
 name: create_image
 
-on: push
+on:
+  push:
+    paths:
+      - 'ci/**'
 
 env:
   IMAGE_REGISTRY: "ghcr.io"
