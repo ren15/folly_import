@@ -10,12 +10,14 @@ env:
   IMAGE_NAME: "folly-dev-env"
   DEBIAN_FRONTEND: noninteractive
   IMAGE_TAG: 0.0.1 
+  IMAGE_FULL_NAME: "${{ env.IMAGE_REPO }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}"
 
 jobs:
   build:
     runs-on: ubuntu-20.04
+
     container: 
-      image: ${{ env.IMAGE_REPO }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+      image: ${{ IMAGE_FULL_NAME }}
 
     steps:
       - uses: actions/checkout@v2
