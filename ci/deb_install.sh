@@ -15,4 +15,7 @@ apt-get install -y \
     pkg-config \
     git
 
+apt-get clean
+rm -rf /var/lib/apt/lists/*
+
 pip install conan
