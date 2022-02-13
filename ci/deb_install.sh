@@ -2,6 +2,7 @@ set -xe
 export DEBIAN_FRONTEND=noninteractive
 
 apt-get update 
+apt-get upgrade -y
 
 apt-get install -y \
     build-essential \
@@ -13,9 +14,13 @@ apt-get install -y \
     clang clang-tidy clangd \
     curl zip unzip tar \
     pkg-config \
-    sudo \
     htop \
     git
+
+apt-get install -y sudo
+useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod 
+    # passwordless sudo for users in the 'sudo' group
+sed -i.bkp -e 's/%sudo\s\+ALL=(ALL\(:ALL\)\?)\s\+ALL/%sudo ALL=NOPASSWD:ALL/g' /etc/sudoers
 
 apt-get clean
 rm -rf /var/lib/apt/lists/*
