@@ -13,6 +13,8 @@ apt-get install -y \
     clang clang-tidy clangd \
     curl zip unzip tar \
     pkg-config \
+    sudo \
+    htop \
     git
 
 apt-get clean

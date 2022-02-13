@@ -14,7 +14,7 @@ configure:
 	cmake -S ${SOURCE_DIR} -B ${BUILD_DIR} \
 		-DCMAKE_EXPORT_COMPILE_COMMANDS=1 \
 		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_TOOLCHAIN_FILE=~/vcpkg/scripts/buildsystems/vcpkg.cmake \
+		-DCMAKE_TOOLCHAIN_FILE=/opt/toolchain/vcpkg/scripts/buildsystems/vcpkg.cmake \
 		-G Ninja
 
 	ln -sf ${BUILD_DIR}/compile_commands.json \
@@ -26,7 +26,6 @@ build:
 run: 
 	${BUILD_DIR}/bin/main
 	${BUILD_DIR}/bin/unbounded_queue_test
-	${BUILD_DIR}/bin/boost_ipc_obj
 	${BUILD_DIR}/bin/b1
 	${BUILD_DIR}/bin/b2
 

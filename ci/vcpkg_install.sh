@@ -6,3 +6,4 @@ git clone https://github.com/Microsoft/vcpkg.git /opt/toolchain/vcpkg
     benchmark \
     gtest \
     boost
+ln -sf /opt/toolchain/vcpkg/vcpkg /usr/local/bin/vcpkg

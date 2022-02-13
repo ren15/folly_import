@@ -13,7 +13,7 @@ env:
   IMAGE_REPO: "ghcr.io/${{ github.repository_owner }}"
   IMAGE_NAME: "folly-dev-env"
   DEBIAN_FRONTEND: noninteractive
-  IMAGE_TAG: 0.0.2 
+  IMAGE_TAG: 0.0.3
 
 jobs:
   create_image:
